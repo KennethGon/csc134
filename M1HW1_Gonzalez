@@ -1,1 +1,34 @@
+// CSC 134 
+// M1HW1
+// Kenneth Gonzalez
+// 9/1/24
 
+#include <iostream>
+using namespace std;
+
+int main() { 
+  // Set up our variables
+  string name = "Forrest Gump";
+  int releasedata = 1994;
+  double price_per_apple;
+  double total_cost;
+
+  // Get user input
+  cout << "What is your name? " << endl; 
+
+
+  // Say hello
+  cout << "___________________" << endl;
+  cout << "Welcome to the ";
+  cout << name << " orchard!" << endl;
+
+ 
+    
+  // Give the answers
+  cout << "Movie Quotes:" << endl;
+  cout << "You have " << num_apples << " apples" << endl;
+  cout << "Each apple costs $" << price_per_apple << endl;
+  cout << "The total is: $" << total_cost << endl; 
+
+return 0;
+}
