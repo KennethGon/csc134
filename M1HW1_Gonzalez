@@ -9,26 +9,28 @@ using namespace std;
 int main() { 
   // Set up our variables
   string name = "Forrest Gump";
-  int releasedata = 1994;
-  double price_per_apple;
-  double total_cost;
+  int release_date = 1994;
+  double gross_revenue = 678.2;
+  
 
   // Get user input
-  cout << "What is your name? " << endl; 
+  cout << "The movie " << name << " came out in " << release_date
+   << "," << endl << "and had a worldwide gross of around $" << gross_revenue << " million dollars." << endl;
 
 
-  // Say hello
-  cout << "___________________" << endl;
-  cout << "Welcome to the ";
-  cout << name << " orchard!" << endl;
 
- 
-    
+
+
+
+
   // Give the answers
+  cout << endl;
   cout << "Movie Quotes:" << endl;
-  cout << "You have " << num_apples << " apples" << endl;
-  cout << "Each apple costs $" << price_per_apple << endl;
-  cout << "The total is: $" << total_cost << endl; 
+  cout << "Life is like a box of chocolates. You never know what you're gonna get -Forrest Gump" << endl;
+  cout << "Some people don’t think miracles happen; well, they do. —Forrest Gump" << endl;
+  cout << "If you do not like my family and friends, I do not want to hear anything about it.   They may mean nothing to you, but they mean everything to me. —Forrest Gump" << endl; 
+  cout << "I'm not a smart man, but I know what love is. -Forrest Gump" << endl;
+  
 
 return 0;
 }
