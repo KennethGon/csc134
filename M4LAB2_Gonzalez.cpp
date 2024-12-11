@@ -1,0 +1,80 @@
+// CSC 134
+// M4LAB2 - Craps
+// Gonzalez
+// 10/9/24
+
+#include <iostream>
+#include <cstdlib>    // for rand()
+#include <ctime>      // for time()
+using namespace std;
+
+int roll() {
+    // get a random number from 1 to 6
+    int die = (rand() % 6) + 1;
+    return die;
+}
+
+// if we define a function after main, we need to declare it first
+bool play_round();
+
+int main()
+{
+    // set up variables
+    int die1, die2, total;
+    int seed; // random seed
+    bool is_winner;
+
+    
+    cout << "Welcome to the craps table." << endl;
+    
+    seed = time(0);
+    srand(seed); // seed the RNG
+
+    // play a round of craps
+    is_winner = play_round();
+    if (is_winner) {
+        cout << "You won!" << endl;
+    }
+    else {
+        cout << "You lost." << endl;
+    }
+    return 0;
+}
+
+bool play_round() {
+    bool is_winner = false;
+    int die1 = roll();
+    int die2 = roll();
+    int point;
+    // give the results
+    int total = die1 + die2;
+    cout << "You rolled "
+         << die1 << " + "
+         << die2 << " = " << total << endl;
+
+    // did they win or lose?
+    if (total == 7 || total == 11) {
+        is_winner = true;
+    }
+    else if (total == 2 || total == 3 || total == 12) {
+        is_winner = false;
+    }
+    else {
+        
+        cout << "Your point is: " << total << endl;
+        point = total;
+
+        do {
+             total = roll() + roll();
+             cout << "Come on lucky " << point << " rolled: " <<  total << endl;
+             if (total == 7) {
+                is_winner = false;
+            }
+            if (total == point) {
+                is_winner = true;
+            }
+        } while (total !=7 && total != point);
+    }
+    
+    return is_winner;
+}

@@ -1,5 +1,5 @@
 // CSC 134
-// M2HW1
+// M2HW1-Gold
 // Kenneth Gonzalez
 // 9/15/2024
 
