@@ -1,6 +1,7 @@
 
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 //CSC 134
@@ -49,8 +50,9 @@ customer_price = volume * PRICE_PER_CU_FT;
 profit = customer_price - cost;
 
 //TODO calculations
+cout << setprecision(2) << fixed;
 cout << "Crate is: " << width << " x " << length << " x " << height << endl;
-cout << "Total volume is: " << volume << "cubic feet." << endl;
+cout << "Total volume is: " << volume << " cubic feet." << endl;
 cout << "Cost to manufacture is $" << cost << endl;
 cout << "Customer is charged $" << customer_price << endl;
 cout << "Total profit is $" << profit << endl;
